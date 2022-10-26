@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Emission</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>monthy_generation_emission</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14572,144 +14572,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     </script>
     <!-- End of mathjax configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Monthly-CO2-Emission-Dataset-for-Each-Coal-and-Natural-Gas-Burning-Power-Plant-in-the-US-from-2013-2020">Monthly CO2 Emission Dataset for Each Coal and Natural Gas Burning Power Plant in the US from 2013-2020<a class="anchor-link" href="#Monthly-CO2-Emission-Dataset-for-Each-Coal-and-Natural-Gas-Burning-Power-Plant-in-the-US-from-2013-2020">&#182;</a></h1><p>Jason &amp; Steve</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Abstract">Abstract<a class="anchor-link" href="#Abstract">&#182;</a></h2><p>To better control the emission of greenhouse gases, it is crucial that we can obtain detailed emission level estimates. CO2 emissions from fossil fuel burning power plants contribute significantly to the total anthropogenic greenhouse gas emissions yet the official emission estimates for them are mostly provided annually. This dataset will downscale annual CO2 emission estimates by using state-level electricity generation data to provide monthly CO2 emission data for all power plants in the United States. Our dataset will be useful for seasonal scale emission research, policy analysis, and demonstrate the potential of further downscaling power plant emissions using electricity generation data.</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Background-and-Summary">Background and Summary<a class="anchor-link" href="#Background-and-Summary">&#182;</a></h2><p>Global warming is one of the most critical challenges that threaten the sustainable development of all of mankind. The cause of the global warming crisis is the greenhouse gas effect, yet the greenhouse effect itself is just a natural phenomenon, it is the excess greenhouse gas emissions from anthropogenic activities that made it problematic. Among all anthropogenic emissions, we identified CO2 emission from fossil fuel combusting power plants as one of the key contributors to the overall global warming effect in the United States. In 2020, 79% of the total greenhouse gas emissions were CO2 and 31% of that come from the electric power industry, making power plants the second largest emitter of CO2 in this country(EPA, 2022).</p>
-<p>To mitigate the impact of the global warming effect, numerous countries have proposed policies and agreements, such as the famous Paris Agreement, with ambitious targets to constrain or decrease the anthropogenic emission of greenhouse gases. In order to work towards these goals, it is essential that we can actually monitor the emission of greenhouse gases. However, this ever-increasing demand for greenhouse gas emissions monitoring is not so easy to be satisfied as the actual process to obtain emission levels is not as straightforward as it seems. Unlike more tangible pollutants such as solid waste, gaseous pollutants cannot be measured directly, instead, their emissions must be estimated using mathematical models. Emission modeling can be done in various ways, but the general approach is to relate more easily measurable variables with emission levels using mathematical equations so that emission levels can be inferred and not measured directly. The kinds of input variables used will depend on the emission source, different sources of emissions will be influenced by different factors and will hence be modeled independently(Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2014, 2016). In the case of fossil fuel burning power plants, emissions can be modeled fairly accurately with input-output production statistics. Relevant input variables include the type of fuel used, amount of energy generated, type of generator used, etc(Maksyutov et al., 2022). Different types of fuel have different compositions and will hence produce different amounts of emissions and will have different power generating capacities, combining detailed fuel data with the amount of power generated and other relevant data in the right way will give researchers an accurate estimate of the total amount of emission.</p>
-<p>The problem for many official emission reports is the low temporal resolution. For example, in the case of the United States, only very large-scale power plants have data on monthly emission estimates, the emissions for all other power plants are given in annual totals. This level of temporal resolution does not provide much information and is not enough for more detailed research. Power plants as a major point source emitter, obtaining emission estimates with high temporal resolution is essential to understand their impact on the local environment and to better analyze emission-reducing practices. For example, if we were to compare greenhouse gas emissions in Atlanta during the summer and winter, knowing only the annual emission totals won’t be such help. The major difficulty of creating an emission data set with high temporal resolution is the long periods of time needed to collect and process the numerous amounts of data from all across the country. However, this painstaking task is based on a developed national census system and will be extremely difficult to further simply or accelerate. Since it is impossible to decrease the time period needed to directly produce emission estimates, we attempted to use proxy data that are correlated with greenhouse gas emissions and available in finer temporal resolutions to downscale annual emissions to finer temporal resolutions. Similar downscaling strategies are commonly used by scientists to achieve both finer spatial and temporal resolution. For example, nighttime light (NTL) data is capable of spatially downscaling urban carbon emissions based on assumptions that NTL data can potentially reflect socioeconomic conditions and human activities which are linked to carbon emissions (Cai et al., 2021). Using downscaling strategies, our goal is to create a dataset of CO2 emissions from power plants at monthly intervals to facilitate research that requires data on more detailed emission trends.</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Methods">Methods<a class="anchor-link" href="#Methods">&#182;</a></h2><p>This section will first describe the data we used and then explain our methodology in creating the dataset. The three major categories of data we used are power plant information data, emission estimates, and electricity generation data. All of our data are provided by the U.S Energy Information Administration (EIA). The EIA collects information on power plants on regular bases and calculates the estimated emission levels for each plant. Specifically, we used raw data obtained from Form EIA-860 and Form EIA-923, and processed datasets including the emission dataset for each power plant and the total electric power dataset.</p>
-<p>For power plant information, we used Form EIA-860 and Form EIA-923. Form-860, the annual electric generator report, collects generator-level data for existing and planned generators and associated environmental equipment in power plants with 1 megawatt or greater capacity or any generator which have the ability to deliver or retrieve power from the grid. This 1-megawatt cutoff is consistent with all other power related data collected in the United States, generators of scale smaller than 1-megawatt annual capacity or the ones that are for personal use, such as solar panels above one’s rooftops, are considered much more trivial sources and are not included. This scale fits desired scale of our analysis as it covers the major emitters and will take much more work to include all emissions from every single generator in the country. This form is provided detailed information about the location of all generators, the type of fuel, the amount of electricity generated, etc. Data is available on an annual interval and dates back to 1990. This form provides exhaustive and uniform coverage of all power plants in the country but lacks detailed information. To address this issue, we used data from Form EIA-923 as a supplement for the EIA-860 form. This form is called Power Plant Operations Form and it provides us with more detailed information, including the type of environmental protection systems installed, monthly generation data for large power plants and etc. Unlike Form EIA-860 where data is collected uniformly for all respondents, Form EIA-923 assigns different sections depending on the generating capacity for each plant. This means that the dataset’s scale and scope are not uniform throughout all variables, and some detailed information is only available for certain power plants. For this dataset, we selected the power plants that offer complete monthly generation data.</p>
-<p>For emission estimates and power generation data, we used pre-assembled datasets by the EIA. As explained previously, emission estimates were obtained using mathematical models that relate input variables with the output emissions, the EIA calculated the emissions based on the information collected by Form EIA-860 and Form EIA-923. The emission estimates were given in annual totals per power plant and the data are available since 2013. The electric power dataset is also created by the EIA based on national grid data. This dataset is released each month and contains information about the electricity generated nationwide during that month. We specifically used Table 1.3A of the dataset, this table gives the monthly total of electricity generated by utility scale generators of each state.</p>
-<p>Our general approach to constructing the monthly powerplant emission is to relate annual emission totals with other relevant information for each power plant and then downscale the annual totals to monthly data based on the monthly power generated in each state. Since we have information on all power plants in the country, our first step is to identify the types of power plants that are actually capable of emitting carbon dioxide. We identified power plants that use coal and natural gas as the two topmost emitters, each contributing 66% and 32% of the total carbon dioxide emission from 2013 to 2020. (graph) Based on this information, we then narrowed our dataset to select all the power plants that use either coal or natural gas as their fuel source. Each plant was assigned a unique plant code which was uniform across all datasets and we used this code to merge the emission data with other plant-specific data provided in the two forms. After constructing the annual emission dataset, the next step is to downscale emissions. We believe that the level of emissions is related to the amount of electricity output so we use the electricity generation data as the proxy data for the downscaling process. We assumed that the emission fluctuations are synchronous with electricity generation fluctuations and monthly emission as a proportion of total annual emission is the same as the monthly generation to annual generation. The monthly fluctuations are calculated in two ways depending on the data available for each power plant. For powerplants with specific data, we used individual monthly fluctuations. For power plants that do not have plant-specific monthly generation data, we assumed that the monthly fluctuations at the state level are representative of the monthly emission fluctuations for all these individual power plants within the state that does not have detailed information. Specifically, we assumed that the power plants without detailed information generate electricity on the same proportional bases according to the fluctuations of the total generation of their state. For example, we will assume that power plants will decrease output by 10% if the state’s total output for that month decrease by 10%. Based on this assumption, we can approximate the monthly output of each power plant and hence, the monthly emission for each individual power plant even when specific data is not available.</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
-
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Technical-validation">Technical validation<a class="anchor-link" href="#Technical-validation">&#182;</a></h2><p>One of the key foundations of our dataset is the assumption that emission can be represented by power-generated data. To verify this assumption, we calculated the correlation between annual emissions and the total power generated in each state for coal and natural gas power plants separately. The data we used are directly from the reported annual emissions and grid data by the EIA. The results are shown below:</p>
-<p>For both coal and natural gas, the R-squared value is greater than 0.95 indicating a near-linear relationship between annual emissions and electricity generated by the two types of power plants. This means that our strategy to use electricity generation as proxy data is valid.</p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Usage-Notes">Usage Notes<a class="anchor-link" href="#Usage-Notes">&#182;</a></h2><p>This dataset has potential uses for conducting monthly scale emission analysis and construction of finer scale/larger coverage emission models.</p>
-<p>When carrying out emission analysis, it is important that the scale of the data is consistent. Our data set can facilitate monthly level emission analysis by providing comprehensive emission estimates for all power plants in the country since 2013. With this data, we can better understand the temporal and spatial variations of power plant emissions, assess the impact of emission control policies, etc. It can also be used to cross-validate with other emission modeling techniques, such as top-down observation based modeling, to identify disparities and hence correct modeling biases.</p>
-<p>Our dataset can also be incorporated into more comprehensive emission datasets. Power plant's emission data can be combined with other emission estimates into a comprehensive dataset that covers greenhouse gas emissions from various sources. We have also proven that our strategy of downscaling emissions using electricity generation as proxy data is feasible, making it possible for future research to further downscale CO2 emissions to finer scales with more detailed proxy data.</p>
-<p>For ethical considerations, we have not identified any ethical issues worth considering in our dataset. Most of the information we used is legally required self-reported objective information and all of them are obtained from public sources. This dataset will only reveal information relevant to controlling global warming which is a crisis that threatens the whole of mankind equally.</p>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-
-</div>
-
-</div>
-
-</div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
 
@@ -14719,14 +14584,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
-
 <div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[123]:</div>
-
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
@@ -14749,46 +14609,58 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
     <tr style="text-align: right;">
       <th></th>
       <th>Year</th>
+      <th>State</th>
+      <th>Plant Code</th>
+      <th>Aggregated Fuel Group</th>
       <th>Month</th>
-      <th>Emission (Predicted)</th>
-      <th>Date</th>
+      <th>Generation</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <th>232</th>
       <td>2013</td>
-      <td>4</td>
-      <td>3.278636e+08</td>
-      <td>2013-04-01</td>
+      <td>AK</td>
+      <td>75</td>
+      <td>GAS</td>
+      <td>Jan</td>
+      <td>2229680.0</td>
     </tr>
     <tr>
-      <th>1</th>
+      <th>231</th>
       <td>2013</td>
-      <td>8</td>
-      <td>3.862687e+08</td>
-      <td>2013-08-01</td>
+      <td>AK</td>
+      <td>75</td>
+      <td>GAS</td>
+      <td>Feb</td>
+      <td>1819216.0</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>235</th>
       <td>2013</td>
-      <td>12</td>
-      <td>3.664463e+08</td>
-      <td>2013-12-01</td>
+      <td>AK</td>
+      <td>75</td>
+      <td>GAS</td>
+      <td>Mar</td>
+      <td>1979419.0</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>228</th>
       <td>2013</td>
-      <td>2</td>
-      <td>3.419873e+08</td>
-      <td>2013-02-01</td>
+      <td>AK</td>
+      <td>75</td>
+      <td>GAS</td>
+      <td>Apr</td>
+      <td>1750900.0</td>
     </tr>
     <tr>
-      <th>4</th>
+      <th>236</th>
       <td>2013</td>
-      <td>1</td>
-      <td>3.609070e+08</td>
-      <td>2013-01-01</td>
+      <td>AK</td>
+      <td>75</td>
+      <td>GAS</td>
+      <td>May</td>
+      <td>1790274.0</td>
     </tr>
     <tr>
       <th>...</th>
@@ -14796,45 +14668,57 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
       <td>...</td>
       <td>...</td>
       <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
-      <th>91</th>
+      <th>241525</th>
       <td>2020</td>
-      <td>3</td>
-      <td>2.497060e+08</td>
-      <td>2020-03-01</td>
+      <td>WY</td>
+      <td>60130</td>
+      <td>GAS</td>
+      <td>Aug</td>
+      <td>2144000.0</td>
     </tr>
     <tr>
-      <th>92</th>
+      <th>241535</th>
       <td>2020</td>
-      <td>5</td>
-      <td>2.408499e+08</td>
-      <td>2020-05-01</td>
+      <td>WY</td>
+      <td>60130</td>
+      <td>GAS</td>
+      <td>Sep</td>
+      <td>2091000.0</td>
     </tr>
     <tr>
-      <th>93</th>
+      <th>241534</th>
       <td>2020</td>
-      <td>11</td>
-      <td>2.534189e+08</td>
-      <td>2020-11-01</td>
+      <td>WY</td>
+      <td>60130</td>
+      <td>GAS</td>
+      <td>Oct</td>
+      <td>2145000.0</td>
     </tr>
     <tr>
-      <th>94</th>
+      <th>241533</th>
       <td>2020</td>
-      <td>10</td>
-      <td>2.606330e+08</td>
-      <td>2020-10-01</td>
+      <td>WY</td>
+      <td>60130</td>
+      <td>GAS</td>
+      <td>Nov</td>
+      <td>2146000.0</td>
     </tr>
     <tr>
-      <th>95</th>
+      <th>241526</th>
       <td>2020</td>
-      <td>9</td>
-      <td>2.740709e+08</td>
-      <td>2020-09-01</td>
+      <td>WY</td>
+      <td>60130</td>
+      <td>GAS</td>
+      <td>Dec</td>
+      <td>2237000.0</td>
     </tr>
   </tbody>
 </table>
-<p>96 rows × 4 columns</p>
+<p>243612 rows × 6 columns</p>
 </div>
 </div>
 
@@ -14843,6 +14727,22 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 
 </div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Calculate-the-coal-percentage-matrix">Calculate the coal percentage matrix<a class="anchor-link" href="#Calculate-the-coal-percentage-matrix">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
 
@@ -14850,59 +14750,19 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 
-
 <div class="jp-OutputArea jp-Cell-outputArea">
 
 <div class="jp-OutputArea-child">
 
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[124]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;AxesSubplot:xlabel=&#39;Date&#39;, ylabel=&#39;Emission (Predicted)&#39;&gt;</pre>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>/var/folders/xy/8mx9wl7x3h19xrmkncxcmw3r0000gn/T/ipykernel_19733/1267620063.py:11: FutureWarning: Calling a ufunc on non-aligned DataFrames (or DataFrame/Series combination). Currently, the indices are ignored and the result takes the index/columns of the first DataFrame. In the future , the DataFrames/Series will be aligned before applying the ufunc.
+Convert one of the arguments to a NumPy array (eg &#39;ufunc(df1, np.asarray(df2)&#39;) to keep the current behaviour, or align manually (eg &#39;df1, df2 = df1.align(df2)&#39;) before passing to the ufunc to obtain the future behaviour and silence this warning.
+  generation_monthly_percentage = np.divide(a, b)
+</pre>
 </div>
-
 </div>
 
 <div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-
-<div class="jp-RenderedImage jp-OutputArea-output ">
-<img src="data:image/png;base64,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"
-class="
-jp-needs-light-background
-"
->
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[125]:</div>
-
 
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
@@ -14924,93 +14784,121 @@ jp-needs-light-background
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Year</th>
+      <th></th>
       <th>Month</th>
-      <th>Emission (Predicted)</th>
-      <th>Date</th>
+      <th>Jan</th>
+      <th>Feb</th>
+      <th>Mar</th>
+      <th>Apr</th>
+      <th>May</th>
+      <th>Jun</th>
+      <th>Jul</th>
+      <th>Aug</th>
+      <th>Sep</th>
+      <th>Oct</th>
+      <th>Nov</th>
+      <th>Dec</th>
+    </tr>
+    <tr>
+      <th>Year</th>
+      <th>State</th>
+      <th>Aggregated Fuel Group</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>2013</td>
-      <td>4</td>
-      <td>3.278636e+08</td>
-      <td>2013-04-01</td>
+      <th rowspan="5" valign="top">2013</th>
+      <th rowspan="2" valign="top">AK</th>
+      <th>COAL</th>
+      <td>0.094504</td>
+      <td>0.086242</td>
+      <td>0.090347</td>
+      <td>0.063786</td>
+      <td>0.059490</td>
+      <td>0.084464</td>
+      <td>0.085011</td>
+      <td>0.086924</td>
+      <td>0.086759</td>
+      <td>0.087629</td>
+      <td>0.088607</td>
+      <td>0.086237</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>2013</td>
-      <td>8</td>
-      <td>3.862687e+08</td>
-      <td>2013-08-01</td>
+      <th>GAS</th>
+      <td>0.100952</td>
+      <td>0.082260</td>
+      <td>0.089421</td>
+      <td>0.079059</td>
+      <td>0.080734</td>
+      <td>0.070892</td>
+      <td>0.081175</td>
+      <td>0.077235</td>
+      <td>0.081196</td>
+      <td>0.070316</td>
+      <td>0.084074</td>
+      <td>0.102686</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>2013</td>
-      <td>12</td>
-      <td>3.664463e+08</td>
-      <td>2013-12-01</td>
+      <th rowspan="2" valign="top">AL</th>
+      <th>COAL</th>
+      <td>0.075630</td>
+      <td>0.067621</td>
+      <td>0.076704</td>
+      <td>0.078566</td>
+      <td>0.084081</td>
+      <td>0.091643</td>
+      <td>0.090542</td>
+      <td>0.099708</td>
+      <td>0.093902</td>
+      <td>0.085688</td>
+      <td>0.076846</td>
+      <td>0.079069</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>2013</td>
-      <td>2</td>
-      <td>3.419873e+08</td>
-      <td>2013-02-01</td>
+      <th>GAS</th>
+      <td>0.080510</td>
+      <td>0.093623</td>
+      <td>0.095553</td>
+      <td>0.067512</td>
+      <td>0.064138</td>
+      <td>0.086802</td>
+      <td>0.090411</td>
+      <td>0.097972</td>
+      <td>0.079333</td>
+      <td>0.080685</td>
+      <td>0.081721</td>
+      <td>0.081740</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>2013</td>
-      <td>1</td>
-      <td>3.609070e+08</td>
-      <td>2013-01-01</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>91</th>
-      <td>2020</td>
-      <td>3</td>
-      <td>2.497060e+08</td>
-      <td>2020-03-01</td>
-    </tr>
-    <tr>
-      <th>92</th>
-      <td>2020</td>
-      <td>5</td>
-      <td>2.408499e+08</td>
-      <td>2020-05-01</td>
-    </tr>
-    <tr>
-      <th>93</th>
-      <td>2020</td>
-      <td>11</td>
-      <td>2.534189e+08</td>
-      <td>2020-11-01</td>
-    </tr>
-    <tr>
-      <th>94</th>
-      <td>2020</td>
-      <td>10</td>
-      <td>2.606330e+08</td>
-      <td>2020-10-01</td>
-    </tr>
-    <tr>
-      <th>95</th>
-      <td>2020</td>
-      <td>9</td>
-      <td>2.740709e+08</td>
-      <td>2020-09-01</td>
+      <th>AR</th>
+      <th>COAL</th>
+      <td>0.085228</td>
+      <td>0.076039</td>
+      <td>0.077372</td>
+      <td>0.073093</td>
+      <td>0.075644</td>
+      <td>0.089857</td>
+      <td>0.100570</td>
+      <td>0.102301</td>
+      <td>0.091274</td>
+      <td>0.070247</td>
+      <td>0.063182</td>
+      <td>0.095193</td>
     </tr>
   </tbody>
 </table>
-<p>96 rows × 4 columns</p>
 </div>
 </div>
 
@@ -15020,23 +14908,328 @@ jp-needs-light-background
 
 </div>
 
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>Generation</th>
+      <th>Emission</th>
+    </tr>
+    <tr>
+      <th>Year</th>
+      <th>State</th>
+      <th>Aggregated Fuel Group</th>
+      <th>Plant Code</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="5" valign="top">2013</th>
+      <th rowspan="5" valign="top">AK</th>
+      <th>GAS</th>
+      <th>75</th>
+      <td>2.216302e+07</td>
+      <td>2.077440e+04</td>
+    </tr>
+    <tr>
+      <th>COAL</th>
+      <th>79</th>
+      <td>1.878430e+08</td>
+      <td>3.511266e+05</td>
+    </tr>
+    <tr>
+      <th>GAS</th>
+      <th>96</th>
+      <td>1.379744e+09</td>
+      <td>8.745762e+05</td>
+    </tr>
+    <tr>
+      <th>COAL</th>
+      <th>6288</th>
+      <td>1.910638e+08</td>
+      <td>2.658208e+05</td>
+    </tr>
+    <tr>
+      <th>GAS</th>
+      <th>6292</th>
+      <td>4.196500e+07</td>
+      <td>3.956033e+04</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">2020</th>
+      <th rowspan="5" valign="top">WY</th>
+      <th>COAL</th>
+      <th>56609</th>
+      <td>3.203757e+09</td>
+      <td>3.571382e+06</td>
+    </tr>
+    <tr>
+      <th>GAS</th>
+      <th>57703</th>
+      <td>3.542980e+08</td>
+      <td>1.624272e+05</td>
+    </tr>
+    <tr>
+      <th>COAL</th>
+      <th>57915</th>
+      <td>1.468371e+08</td>
+      <td>9.347161e+05</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">GAS</th>
+      <th>57915</th>
+      <td>6.580391e+07</td>
+      <td>2.261733e+05</td>
+    </tr>
+    <tr>
+      <th>60130</th>
+      <td>2.725400e+07</td>
+      <td>1.661524e+04</td>
+    </tr>
+  </tbody>
+</table>
+<p>20597 rows × 2 columns</p>
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Worked-Citied">Worked Citied<a class="anchor-link" href="#Worked-Citied">&#182;</a></h2><ol>
-<li>Cai, M., Shi, Y., Ren, C., Yoshida, T., Yamagata, Y., Ding, C., &amp; Zhou, N. (2021). The need for urban form data in spatial modeling of urban carbon emissions in China: A critical review. Journal of Cleaner Production, 319, 128792. <a href="https://doi.org/https://doi.org/10.1016/j.jclepro.2021.128792">https://doi.org/https://doi.org/10.1016/j.jclepro.2021.128792</a></li>
-<li>EPA. (2022). Overview of Greenhouse Gases.  Retrieved from <a href="https://www.epa.gov/ghgemissions/overview-greenhouse-gases">https://www.epa.gov/ghgemissions/overview-greenhouse-gases</a></li>
-<li>Inventory of U.S. Greenhouse Gas Emissions and Sinks: 1990-2014. (2016).  Retrieved from <a href="https://www.epa.gov/sites/default/files/2017-04/documents/us-ghg-inventory-2016-main-text.pdf">https://www.epa.gov/sites/default/files/2017-04/documents/us-ghg-inventory-2016-main-text.pdf</a></li>
-<li>Maksyutov, S., Brunner, D., Turner, A. J., Zavala-Araiza, D., Janardanan, R., Bun, R., Oda, T., &amp; Patra, P. K. (2022). Chapter 14 - Applications of top-down methods to anthropogenic GHG emission estimation. In B. Poulter, J. G. Canadell, D. J. Hayes, &amp; R. L. Thompson (Eds.), Balancing Greenhouse Gas Budgets (pp. 455-481). Elsevier. <a href="https://doi.org/https://doi.org/10.1016/B978-0-12-814952-2.00006-X">https://doi.org/https://doi.org/10.1016/B978-0-12-814952-2.00006-X</a></li>
-</ol>
+</div>
 
 </div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>        <td>Emission</td>     <th>  R-squared:         </th>  <td>   0.971</td>  
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th>  <td>   0.971</td>  
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th>  <td>5.740e+05</td> 
+</tr>
+<tr>
+  <th>Date:</th>             <td>Tue, 25 Oct 2022</td> <th>  Prob (F-statistic):</th>   <td>  0.00</td>   
+</tr>
+<tr>
+  <th>Time:</th>                 <td>12:01:15</td>     <th>  Log-Likelihood:    </th> <td>-2.2351e+05</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td> 17031</td>      <th>  AIC:               </th>  <td>4.470e+05</td> 
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td> 17029</td>      <th>  BIC:               </th>  <td>4.470e+05</td> 
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     1</td>      <th>                     </th>      <td> </td>     
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>      <td> </td>     
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+       <td></td>         <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>  <td> 3.858e+04</td> <td>  999.434</td> <td>   38.604</td> <td> 0.000</td> <td> 3.66e+04</td> <td> 4.05e+04</td>
+</tr>
+<tr>
+  <th>Generation</th> <td>    0.0004</td> <td> 5.75e-07</td> <td>  757.603</td> <td> 0.000</td> <td>    0.000</td> <td>    0.000</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td>20291.601</td> <th>  Durbin-Watson:     </th>  <td>   1.605</td>  
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th>  <td> 0.000</td>   <th>  Jarque-Bera (JB):  </th> <td>7003276.895</td>
+</tr>
+<tr>
+  <th>Skew:</th>           <td> 5.950</td>   <th>  Prob(JB):          </th>  <td>    0.00</td>  
+</tr>
+<tr>
+  <th>Kurtosis:</th>       <td>101.628</td>  <th>  Cond. No.          </th>  <td>1.87e+09</td>  
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 1.87e+09. This might indicate that there are<br/>strong multicollinearity or other numerical problems.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>        <td>Emission</td>     <th>  R-squared:         </th> <td>   0.992</td> 
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.992</td> 
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>4.207e+05</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Tue, 25 Oct 2022</td> <th>  Prob (F-statistic):</th>  <td>  0.00</td>  
+</tr>
+<tr>
+  <th>Time:</th>                 <td>12:01:17</td>     <th>  Log-Likelihood:    </th> <td> -50722.</td> 
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>  3566</td>      <th>  AIC:               </th> <td>1.014e+05</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>  3564</td>      <th>  BIC:               </th> <td>1.015e+05</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     1</td>      <th>                     </th>     <td> </td>    
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>    <th>                     </th>     <td> </td>    
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+       <td></td>         <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>Intercept</th>  <td> 1.649e+05</td> <td> 7599.864</td> <td>   21.698</td> <td> 0.000</td> <td>  1.5e+05</td> <td>  1.8e+05</td>
+</tr>
+<tr>
+  <th>Generation</th> <td>    0.0011</td> <td> 1.64e-06</td> <td>  648.622</td> <td> 0.000</td> <td>    0.001</td> <td>    0.001</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td>1874.382</td> <th>  Durbin-Watson:     </th> <td>   1.682</td> 
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th>  <td> 0.000</td>  <th>  Jarque-Bera (JB):  </th> <td>37282.769</td>
+</tr>
+<tr>
+  <th>Skew:</th>           <td> 2.052</td>  <th>  Prob(JB):          </th> <td>    0.00</td> 
+</tr>
+<tr>
+  <th>Kurtosis:</th>       <td>18.300</td>  <th>  Cond. No.          </th> <td>5.76e+09</td> 
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 5.76e+09. This might indicate that there are<br/>strong multicollinearity or other numerical problems.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell  jp-mod-noInput ">
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>/var/folders/xy/8mx9wl7x3h19xrmkncxcmw3r0000gn/T/ipykernel_19733/230044131.py:2: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  coal_monthly_generation[&#39;Emission (Predicted)&#39;] = model_coal.predict(coal_monthly_generation)
+/var/folders/xy/8mx9wl7x3h19xrmkncxcmw3r0000gn/T/ipykernel_19733/230044131.py:5: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  gas_monthly_generation[&#39;Emission (Predicted)&#39;] = model_gas.predict(gas_monthly_generation)
+</pre>
 </div>
 </div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs jp-mod-noInput ">
+
 </div>
 </body>
 
